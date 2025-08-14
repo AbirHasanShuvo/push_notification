@@ -19,7 +19,6 @@ class _HomeScreenState extends State<HomeScreen> {
     //notificationServices.isTokenRefresh();
     //device token
     notificationServices.getDeviceToken().then((value) {
-      ;
       print('Device Token: $value');
     });
   }
