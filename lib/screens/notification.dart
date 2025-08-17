@@ -57,13 +57,13 @@ class _NotificationScreenState extends State<NotificationScreen> {
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
       final title = message.notification!.title ?? "N/A";
       final body = message.notification!.body ?? "N/A";
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) =>
-              NotificationDetailsScreen(title: title, body: body),
-        ),
-      );
+      // Navigator.push(
+      //   context,
+      //   MaterialPageRoute(
+      //     builder: (context) =>
+      //         NotificationDetailsScreen(title: title, body: body),
+      //   ),
+      // );
     });
     //already the app is closed or terminated
     FirebaseMessaging.instance.getInitialMessage().then((message) {
